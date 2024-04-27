@@ -31,4 +31,7 @@
     E. We get `false` because `true` gets converted into `1` and since `1=2` is false, we get `false`.
     F. We get `true` because when we use the `===` we are checking that we get the same type of `true`. When we pass any non-zero number to the function `Boolean(number)` we always get `true` unless a zero is passed. Since `true` and `true` are the same type and value, we get `true`.
 15. The difference between `==` and `===` is that `==` automatically performs type coercion if the operand are of different types. In contrast, `===` does not perform any type coersion, so if the operands are of different types JS returns `false` instantly. 
-16. 
+16. completed
+17. `[2,4,6]` will be the resulting new array. We first create our constant `newArr` that cannot be reassigned, but modified. We then iterate through each array element of `array` and for each iteration we add the result of invoking `callback(array[i])`, which basically tells the program to call `doSomething(num)` for all elements and lastly push the result into `newArr`. To summarize, the function `modifyArray` receives an array as an argument ,multiplies each element by 2, and returns the new results as a new array.
+18. completed
+19. code snipped prints in the following order: `1 4 3 2`. Basically line 2 executes instantly, line 3 is scheduled to execute 1 second in the future, line 4 scheduled to execute 0 seconds into the future, but with some minimal delay, and line 5 executes instantly. As a result `1 4` get outputted instantly followed by `3` and then `2`.
