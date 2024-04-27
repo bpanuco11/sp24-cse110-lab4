@@ -9,11 +9,26 @@
 9. We get an error where `i` is not defined because it was declared as `let` type and since we tried to access it outside of the allowed scope, we get an error saying that `i` was not defined.
 10. `3` gets printed out because that is indeed the length of the array that we passed as the first argument to the function. Since `length` is `const` and we never changed it, no errors were present.
 11. We get the exact results as `question 4` where `[ 50, 100, 150 ]` is returned. There are no errors because all variables of type `const` were never reassigned and `i` was never invoked outside of its scope. Although a bit confusing, `line 7` seems to reassign the `discountedPrice` variable, but we actually create a new `const discountedPrice` for every iteration, so that is valid.
-12. 
-    A. `student.name`
+12. A. `student.name`
     B. `student['Grad Year']`
     C. `student.greeting()`
     D. `student['Favorite Teacher']['name']`
-    E. `student['courseLoad'][0]`
+    E. `student['courseLoad'][0]` 
 
-    
+13. A. We get `'32'` because since we have a string, in this case `'3'`, the `+` operator will concatenate `int` 2 into string `'3'` resulting in `'32'`.
+    B. We get `1` because the `-` operator is used to convert our variables into `int`. So, we get `3-2` which equals to `1`.
+    C. we get `3` because `null` is simply converted to 0 by the `+` operator.
+    D. we get `'3null'` because the `+` operator will simply convert `null` into a string since we are trying to use the operator with another string, in this case `'3'`.
+    E. we get `4` because `true` is simply converted to its corresponding integer value `1` given that we are using the `+` operator with an integer value. So the addition of 3 plus 1 is 4.
+    F. The `+` operator will convert both values into integers, so we have `0 + 0` which equals to our final answer `0`.
+    G. we get `'3undefined'` because since we have a string value using the `+` operator, `undefined` gets converted into a string and gets concatenated with '3'.
+    H. we get `NaN` because when the `-` operator is used, `undefined` is converted into `NaN` which means 'not a number'. This will result in `NaN` no matter what because a variable minus something that is not a number will results in something that is not real. 
+
+14. A. We get `true` because the `>` operator will convert `2` into an integer. Since `2 > 1` is indeed true, the conditional statement returns `true`.
+    B. We get `false` because since we are comparing two strings, we use compare each of their characters and as a result of their `ascii` we know that this statement is indeed `false`.
+    C. We get `true` because the `==` operator will convert `2` into an integer due to how we have an integer present in the comparison of the string. Since `2=2` is indeed true, we get `true`.
+    D. We get `false` because the `===` operator does not perform type conversions. As a result of different types being present, `false` is returned.
+    E. We get `false` because `true` gets converted into `1` and since `1=2` is false, we get `false`.
+    F. We get `true` because when we use the `===` we are checking that we get the same type of `true`. When we pass any non-zero number to the function `Boolean(number)` we always get `true` unless a zero is passed. Since `true` and `true` are the same type and value, we get `true`.
+15. The difference between `==` and `===` is that `==` automatically performs type coercion if the operand are of different types. In contrast, `===` does not perform any type coersion, so if the operands are of different types JS returns `false` instantly. 
+16. 
