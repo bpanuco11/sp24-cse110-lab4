@@ -1,0 +1,2 @@
+1. The bug is that num1 and num2 variables are strings when using the `+` operator which would result on the concatenation of both variables instead of the sum. To fix it all I had to do is parse both num1 and num2 into floats.
+2. Tox fix it I would process both num1 and num2 by using the `parseFloat` function befor the `+` executes.
